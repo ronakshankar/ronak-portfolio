@@ -30,7 +30,7 @@ const Portfolio = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'expertise', 'experience', 'projects', 'skills', 'education'];
+      const sections = ['home','about', 'expertise', 'experience', 'projects', 'skills', 'education'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -250,7 +250,7 @@ const Portfolio = () => {
                 {/* Right Side: Content */}
                 <div className="md:w-[45%] bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                   <ul className="space-y-3 text-sm text-slate-600 list-disc list-outside pl-4">
-                    <li>Developed <strong>atomic pointer-based data structures in Golang</strong>, enabling unified schema manipulation across multiple goroutines.</li>
+                    <li>Developed <strong>atomic pointer-based data structures in Golang</strong>, enabling. and new stuff over here unified schema manipulation across multiple goroutines.</li>
                     <li>Orchestrated microservices on <strong>ECS Fargate</strong> for customer data pipelines, enhancing debugging efficiency by 30% via custom UI tools.</li>
                     <li>Performed critical <strong>West Coast migration</strong> during AWS us-east-1 outage (Oct 2025), resolving 100% failure rate with zero production impact during pullback.</li>
                     <li>Onboarded ephemeral <strong>Platform Testing environments</strong> to mock critical path components between Dev and QA.</li>
