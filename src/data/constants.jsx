@@ -18,22 +18,18 @@ export const STATS = [
 export const EXPERIENCE = [
   {
     logo: 'Capital-one-Logo-1.png',
-    role: 'Software Engineer',
+    role: 'Senior Software Engineer',
     company: 'Capital One',
     location: 'McLean, VA',
     period: 'July 2022 – Present',
     color: 'indigo',
     bullets: [
-      'Orchestrated microservices on ECS Fargate for customer data pipelines; built OAuth2-secured UI tools improving debugging efficiency by 30%.',
-      'Engineered thread-safe Java components (AtomicReference, ConcurrentHashMap) for Spring Boot microservices, boosting transaction throughput by 25%.',
-      'Developed atomic pointer-based Golang data structures for concurrent goroutine access using a unified schema.',
-      'Designed an agentic Claude Code skill to autonomously triage Jira vulnerability tickets and generate reviewer-ready PRs, eliminating manual remediation across 4 production components.',
-      'Led a real-time triaging dashboard across 3 engineering teams, cutting on-call investigation time from ~22 min to under 10 min per incident.',
-      'Deployed a fault-tolerant Java AWS Lambda (SQS + DLQ → DynamoDB CRUD) handling 120+ TPS in production.',
-      'Rearchitected a flag-based MVP into a fully routed React app (React Router), enabling deep-linking and shareable feature URLs.',
-      'Raised SonarQube coverage from 74% → 95% using GitHub Copilot for test generation and refactoring.',
-      'Performed West Coast migration during the AWS us-east-1 outage (Oct 2025), resolving a 100% failure rate with zero production impact on rollback.',
-      'Resolved a Sev 3 incident via IAM policy roll-forward, dropping error rate from 86% → 0.5%.',
+      'Cut per-incident triage time by 55% across 3 engineering teams, from 22 minutes to under 10, by building a React Flow visualizer over S3-backed execution traces.',
+      'Restored service health from 86% to 0.5% error rate on a 1,000+ RPS platform during on-call production support, identifying an IAM misconfiguration and executing a roll-forward deployment.',
+      'Scaled transaction throughput 25% across 6 services, from 800 to 1,000+ RPS, by engineering thread-safe Java components using AtomicReference and ConcurrentHashMap.',
+      'Sustained zero message loss across 10M+ test events at 120+ TPS by deploying an SQS and DLQ-backed Lambda pipeline for DynamoDB CRUD ID operations.',
+      'Eliminated 1,000+ daily duplicate executions across production microservices by implementing a Spring Data JPA deduplication layer validated against AWS RDS PostgreSQL.',
+      'Reduced compliance overhead from 2 sprint points to half a day by engineering a Claude Code skill that clones flagged repos, remediates violations and generates reviewer-ready PRs from a single Jira ticket ID.',
     ],
     tags: ['Java', 'Spring Boot', 'Golang', 'React.js', 'AWS', 'ECS Fargate', 'Lambda', 'DynamoDB', 'Jenkins', 'Splunk'],
   },
@@ -59,11 +55,9 @@ export const EXPERIENCE = [
     period: 'June 2019 – July 2020',
     color: 'emerald',
     bullets: [
-      'Developed a React Native stock trading app with 100K+ downloads and 4+ app rating across iOS and Android.',
-      'Reduced app bundle from 87MB → 35MB and cold-start time ~60% by migrating the JS runtime to the Hermes engine.',
-      'Built a custom Pub/Sub data-sync module for 10,000+ DAUs, improving trading insight latency by 45%.',
-      'Integrated 8+ REST APIs, reducing manual refresh requirements by 90% across all trading workflows.',
-      'Resolved a production overheating issue across 100+ watchlists via a viewport-aware Pub/Sub system that recycled connections on scroll.',
+      'Built a React Native stock trading app serving 10,000+ daily active users across iOS and Android, with real-time data streaming and secure transaction handling.',
+      'Cut active WebSocket connections by 70% across 100+ stock watchlists by engineering a viewport-aware Pub/Sub system that eliminated redundant stream overhead on idle views.',
+      'Reduced app cold start time by 60% and bundle size from 87MB to 35MB across iOS and Android by migrating the JavaScript runtime from the default engine to Hermes.',
     ],
     tags: ['React Native', 'Redux', 'React Navigation', 'JavaScript', 'Hermes', 'Azure Pipelines'],
   },
@@ -98,32 +92,35 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    title: 'Personal Expense Tracker',
-    date: 'Aug 2024',
+    title: 'Distributed Job Orchestrator',
+    date: 'Jan 2025',
     icon: <Zap size={22} />,
     color: 'indigo',
+    repo: 'https://github.com/ronakshankar/distributed-job-orchestrator',
     description:
-      'A modular financial dashboard built with Angular, integrated with a Spring Boot + GraphQL backend. Replaced static JSON endpoints with JPA-backed REST APIs, cutting transaction response times by 40% and improving user insights by 80%.',
-    tags: ['Angular', 'GraphQL', 'Spring Boot', 'Spring Data JPA'],
+      'A distributed job orchestration platform in Java 17 and Spring Boot 3, supporting configurable thread pools up to 20 concurrent workers and REST-based management. Captures immutable per-attempt execution records including duration, stack traces, and thread names via transparent Spring AOP auditing — without modifying worker code.',
+    tags: ['Java 17', 'Spring Boot 3', 'PostgreSQL', 'Spring AOP', 'Testcontainers'],
   },
   {
-    title: 'Real-Time Inventory Management',
-    date: 'Dec 2024',
+    title: 'WireTunnel',
+    date: 'Mar 2025',
     icon: <Shield size={22} />,
     color: 'emerald',
+    repo: 'https://github.com/ronakshankar/goproxy-tunnel',
     description:
-      'Serverless backend on Google Cloud Functions + Firestore delivering 99.9% real-time sync accuracy. Google Pub/Sub drives instant stock updates with inventory change latency under 250ms, improving response efficiency by 30%.',
-    tags: ['Google Cloud Functions', 'Firestore', 'Pub/Sub', 'Serverless'],
+      'A high-performance WebSocket-to-TCP protocol proxy in Go using Goroutine pairs per connection, sustaining 2.5GB/hr throughput across 10,000+ simultaneous connections without thread contention. Features a non-blocking observability pipeline using io.Pipe and a Worker Pool to compress and persist traffic metadata, saving 4GB of disk storage daily with zero measurable latency impact.',
+    tags: ['Go', 'WebSocket', 'TCP', 'Goroutines', 'io.Pipe'],
   },
 ];
 
 export const EDUCATION = [
   {
     logo: 'WPI_logo.svg.png',
-    degree: "Master's in Data Science",
+    degree: 'MS in Computer Science',
     school: 'Worcester Polytechnic Institute',
     location: 'Worcester, MA',
     period: 'Aug 2020 – May 2022',
+    photo: 'Graduation from WPI.JPG',
   },
   {
     logo: 'Anna_university_logo.jpeg',

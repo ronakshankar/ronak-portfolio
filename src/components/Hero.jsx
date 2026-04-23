@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail, ChevronDown, ArrowUpRight } from 'lucide-react';
+import { Linkedin, Github, Mail, ChevronDown, ArrowUpRight, CalendarDays } from 'lucide-react';
 import { scrollToSection } from '../utils/scroll';
 
 export default function Hero() {
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm font-medium tracking-wide">
             <span className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" />
-            Software Engineer · McLean, VA
+            Senior Software Engineer · McLean, VA
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight">
@@ -33,8 +33,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-slate-400 text-lg leading-relaxed max-w-md">
-            Building <strong className="text-slate-200">resilient, high-throughput</strong> systems at Capital One —
-            from concurrent Golang data structures to fault-tolerant AWS Lambda services at <strong className="text-slate-200">120 TPS</strong>.
+            Building <strong className="text-slate-200">resilient, high-throughput</strong> distributed systems at Capital One —
+            owning production platforms at <strong className="text-slate-200">1,000+ RPS</strong> across 3 engineering teams, eliminating 1,000+ duplicate executions and cutting incident triage time by <strong className="text-slate-200">55%</strong>.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -44,6 +44,14 @@ export default function Hero() {
             >
               See My Work <ArrowUpRight size={17} />
             </button>
+            <a
+              href="https://calendar.app.google/MnUBaMmTDrKpmDG38"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 bg-indigo-600 text-white px-7 py-3.5 rounded-full font-semibold hover:bg-indigo-500 transition-colors shadow-xl shadow-indigo-600/30"
+            >
+              <CalendarDays size={17} /> Schedule a Call
+            </a>
             <button
               onClick={() => scrollToSection('about')}
               className="flex items-center gap-2 border border-slate-700 text-slate-300 px-7 py-3.5 rounded-full font-semibold hover:border-slate-500 hover:text-white transition-colors"
@@ -74,7 +82,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
                 <p className="text-white font-bold text-lg leading-tight">Ronak Sankaranarayanan</p>
-                <p className="text-indigo-300 text-sm">Software Engineer</p>
+                <p className="text-indigo-300 text-sm">Senior Software Engineer</p>
               </div>
             </div>
           </div>

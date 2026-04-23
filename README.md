@@ -1,16 +1,81 @@
-# React + Vite
+# Ronak Sankaranarayanan — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site built with **React + Vite + Tailwind CSS**, deployed to GitHub Pages.
 
-Currently, two official plugins are available:
+Live site: [ronakshankar.github.io/ronak-portfolio](https://ronakshankar.github.io/ronak-portfolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Local Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Install dependencies
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+### Start the dev server (with hot-reload)
+```bash
+npm run dev
+```
+Opens at `http://localhost:5173` by default.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Preview the production build locally
+```bash
+npm run build
+npm run preview
+```
+Opens at `http://localhost:4173`.
+
+---
+
+## Deploying to GitHub Pages
+
+The site is deployed via the `gh-pages` npm package, which pushes the built `dist/` folder to the `github-pages` branch. GitHub Pages is configured in the repo **Settings → Pages** to serve from the `github-pages` branch.
+
+### One-command deploy
+```bash
+npm run deploy
+```
+This runs `npm run build` first (via the `predeploy` hook), then pushes the output to the `github-pages` branch automatically.
+
+### Full workflow for updating the live site
+```bash
+# 1. Make your changes on a feature branch
+git checkout -b your-branch-name
+
+# 2. Test locally
+npm run dev
+
+# 3. Commit and push your changes
+git add <files>
+git commit -m "your message"
+git push origin your-branch-name
+
+# 4. Merge into main (via PR or directly)
+git checkout main
+git merge your-branch-name
+
+# 5. Deploy to GitHub Pages (github-pages branch)
+npm run deploy
+```
+
+After `npm run deploy` completes, GitHub Pages picks up the new build from the `github-pages` branch within ~1 minute.
+
+---
+
+## Project Structure
+
+```
+ronak-portfolio/
+├── public/               # Static assets (images, resume PDF)
+├── src/
+│   ├── components/       # React components (Hero, About, Experience, …)
+│   ├── data/constants.jsx # All content — experience, skills, projects, education
+│   ├── hooks/
+│   ├── utils/
+│   └── main.jsx
+├── vite.config.js        # base: '/ronak-portfolio/'
+└── package.json
+```
+
+> To update portfolio content (experience bullets, projects, skills, education), edit **`src/data/constants.jsx`** and redeploy.

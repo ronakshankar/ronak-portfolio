@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import Reveal from './Reveal';
 import { PROJECTS, ACCENT } from '../data/constants';
 
@@ -37,13 +37,23 @@ export default function Projects() {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">{proj.title}</h3>
                   <p className="text-slate-400 text-sm leading-relaxed mb-6">{proj.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {proj.tags.map(t => (
                       <span key={t} className="text-xs px-3 py-1 bg-slate-800 text-slate-300 rounded-full font-medium border border-slate-700">
                         {t}
                       </span>
                     ))}
                   </div>
+                  {proj.repo && (
+                    <a
+                      href={proj.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors border border-slate-700 hover:border-slate-500 px-4 py-2 rounded-full"
+                    >
+                      <Github size={15} /> View on GitHub
+                    </a>
+                  )}
                 </div>
               </Reveal>
             );
