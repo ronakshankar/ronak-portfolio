@@ -69,7 +69,7 @@ export default function Header() {
         {/* CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <a
-            href="/ronak-portfolio/resume.pdf"
+            href="/ronak-portfolio/Ronak Software Engineer.pdf"
             download
             className="hidden md:flex items-center gap-2 bg-indigo-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-600/20"
           >
@@ -98,7 +98,7 @@ export default function Header() {
             </button>
           ))}
           <a
-            href="/ronak-portfolio/resume.pdf"
+            href="/ronak-portfolio/Ronak Software Engineer.pdf"
             download
             className="flex items-center gap-2 px-4 py-3 mt-2 bg-indigo-600 text-white rounded-xl text-sm font-semibold"
           >

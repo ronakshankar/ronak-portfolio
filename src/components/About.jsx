@@ -36,10 +36,10 @@ export default function About() {
 
           <Reveal delay={100}>
             <p className="text-slate-600 leading-relaxed">
-              I'm a Software Engineer with 4+ years of experience building cloud-native backend systems and full-stack applications. At Capital One, I work on high-concurrency microservices in <strong>Java & Golang</strong>, fault-tolerant AWS infrastructure, and developer-experience tooling.
+              I'm a Senior Software Engineer with 4+ years of experience building cloud-native backend systems and full-stack applications. At Capital One, I own production distributed systems at 1,000+ RPS, engineering high-concurrency microservices in <strong>Java & Golang</strong>, fault-tolerant AWS infrastructure, and agentic AI automation.
             </p>
             <p className="text-slate-600 leading-relaxed mt-4">
-              I hold a Master's in Data Science from WPI where I also worked as a research engineer on GPU-accelerated ML pipelines. I care deeply about code quality, automated testing, and delivering measurable business impact.
+              I hold an MS in Computer Science from WPI where I also worked as a research engineer on GPU-accelerated ML pipelines. I care deeply about code quality, automated testing, and delivering measurable business impact.
             </p>
           </Reveal>
 

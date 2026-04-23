@@ -54,7 +54,7 @@ export default function Footer() {
                 </button>
               ))}
               <a
-                href="/ronak-portfolio/resume.pdf"
+                href="/ronak-portfolio/Ronak Software Engineer.pdf"
                 download
                 className="flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300 transition-colors mt-2"
               >
